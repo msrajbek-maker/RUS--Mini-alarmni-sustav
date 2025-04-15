@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout
 
       - name: Install PlantUML
         run: |
@@ -27,7 +27,7 @@ jobs:
           plantuml -tpng -o output *.puml
 
       - name: Upload diagrams as artifact
-        uses: ./github/actions/upload-artifact
+        uses: actions/upload-artifact
         with:
           name: uml-diagrams
           path: output
