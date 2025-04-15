@@ -1,39 +1,34 @@
-name: Doxygen Documentation Generation
+name: Doxygen Documentation
 
 on:
   push:
     branches:
-      - main  # Pokreće workflow kada se napravi commit na main grani
+      - main
   pull_request:
     branches:
-      - main  # Pokreće workflow kada se napravi pull request na main grani
+      - main
 
 jobs:
   doxygen:
-    runs-on: ubuntu-latest  # Pokreće workflow na najnovijoj verziji Ubuntu
+    runs-on: ubuntu-latest
 
     steps:
-      # Checkout the code
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
+    
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y doxygen graphviz plantuml
+    
+    - name: List project files
+      run: ls -R
 
-      # Install Doxygen
-      - name: Install Doxygen
-        run: sudo apt-get install -y doxygen
-
-      # Install PlantUML (za generiranje dijagrama)
-      - name: Install PlantUML
-        run: sudo apt-get install -y plantuml
-
-      # Generate Doxygen documentation
-      - name: Run Doxygen
-        run: doxygen Doxygen.yml  # Pokreće Doxygen s tvojim postavkama (Doxygen.yml datotekom)
-
-      # Commit generated documentation back to the repo (ako želiš pohraniti dokumentaciju u repozitorij)
-      - name: Commit and Push Documentation
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          git add docs/*  # Dodaj generiranu dokumentaciju
-          git commit -m "Update Doxygen Documentation"
-          git push
+    - name: Generate Doxygen documentation
+      run: doxygen Doxyfile
+    
+    - name: Upload generated documentation
+      uses: actions/upload-artifact@v2
+      with:
+        name: doxygen-docs
+        path: docs/html
