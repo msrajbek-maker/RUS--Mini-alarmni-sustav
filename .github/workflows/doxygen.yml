@@ -1,25 +1,31 @@
-# Doxygen Configuration
+name: Doxygen Documentation
 
-version: 1.0
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
-doxygen:
-  INPUT: "./src"
-  OUTPUT_DIRECTORY: "docs"
-  FILE_PATTERNS: "*.cpp, *.h"
-  RECURSIVE: YES
-  EXCLUDE: "tests/*"
-  
-  # PlantUML settings
-  ENABLE_DOXYGEN: YES
-  PLANTUML_PATH: "/path/to/plantuml.jar"   # Putanja do PlantUML jar datoteke
-  
-  # Definiranje stilova za dijagrame
-  UML_LOOK: YES
-  UML_GRAPHS: YES
-  UML_CLASS_DIAGRAMS: YES
-  UML_USE_HTML: YES
-  
-  # Korištenje dijagrama s PlantUML
-  GENERATE_UML: YES
-  UML_CLASS_DIAGRAMS: YES
-  UML_GRAPHVIZ_DOT: YES
+jobs:
+  doxygen:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Doxygen
+        run: |
+          sudo apt-get install doxygen
+          sudo apt-get install graphviz
+
+      - name: Run Doxygen
+        run: |
+          doxygen Doxyfile
+
+      - name: Upload generated documentation
+        uses: actions/upload-artifact@v2
+        with:
+          name: doxygen-docs
+          path: path/to/your/generated/docs/
