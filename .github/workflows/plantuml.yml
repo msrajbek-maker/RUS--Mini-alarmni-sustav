@@ -27,7 +27,7 @@ jobs:
           plantuml -tpng -o output *.puml
 
       - name: Upload diagrams as artifact
-        uses: actions/upload-artifact@v3
+        uses: ./github/actions/upload-artifact
         with:
           name: uml-diagrams
           path: output
