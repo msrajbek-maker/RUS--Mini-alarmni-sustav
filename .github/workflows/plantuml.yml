@@ -1,4 +1,9 @@
 name: Generate UML Diagrams with PlantUML
+uses: actions/upload-artifact@v2
+with:
+    name: uml-diagrams  # Ovo je naziv artefakta
+    path: "*.png"  # Ovo označava put do datoteka koje će biti pohranjene
+
 
 # Trigger: Pokreće workflow kada se promjene učine na 'main' grani ili putem 'pull requesta'
 on:
