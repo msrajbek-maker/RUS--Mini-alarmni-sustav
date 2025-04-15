@@ -1,0 +1,37 @@
+name: Generate UML Diagrams with PlantUML
+
+# Trigger: Pokreće workflow kada se promjene učine na 'main' grani ili putem 'pull requesta'
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  generate-diagrams:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Korak 1: Checkout koda iz repozitorija
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Korak 2: Instalacija PlantUML
+      - name: Set up PlantUML
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y plantuml
+
+      # Korak 3: Generiranje UML dijagrama koristeći PlantUML
+      - name: Generate UML diagrams
+        run: |
+          plantuml *.puml  # Ovdje generiramo dijagrame iz svih .puml datoteka
+
+      # Korak 4: Pohranjivanje generiranih dijagrama kao artefakta
+      - name: Upload generated UML diagrams
+        uses: actions/upload-artifact@v2
+        with:
+          name: uml-diagrams
+          path: "*.png"  # Ovdje pohranjujemo generirane dijagrame u PNG formatu
