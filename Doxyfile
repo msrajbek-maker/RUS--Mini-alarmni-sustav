@@ -1,14 +1,31 @@
-# Doxygen konfiguracija
-
-PROJECT_NAME           = "Mini Alarmni Sustav"
-OUTPUT_DIRECTORY       = docs
+PROJECT_NAME           = "RUS_Projekt"
+PROJECT_BRIEF          = "Završni projekt iz kolegija Ugradbeni sustavi"
+OUTPUT_DIRECTORY       = ../docs/Projekt
+HTML_OUTPUT            = html
+USE_MDFILE_AS_MAINPAGE = Readme.md
 INPUT                  = .
-FILE_PATTERNS          = *.ino *.cpp *.h
 RECURSIVE              = YES
+FILE_PATTERNS          = *.c *.h *.ino
+EXTENSION_MAPPING      = ino=c
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+GENERATE_RTF           = NO
+HTML_COLORSTYLE        = AUTO_LIGHT
+HTML_DYNAMIC_SECTIONS  = YES
+GENERATE_TREEVIEW      = YES
+DISABLE_INDEX          = NO
+SHOW_USED_FILES        = YES
+SHOW_FILES             = YES
 EXTRACT_ALL            = YES
 EXTRACT_PRIVATE        = YES
-GENERATE_LATEX         = NO
-GENERATE_HTML          = YES
-GENERATE_TREEVIEW      = YES
-HTML_OUTPUT            = html
-FULL_PATH_NAMES        = NO
+EXTRACT_STATIC         = YES
+EXTRACT_LOCAL_CLASSES  = YES
+OPTIMIZE_OUTPUT_FOR_C  = YES
+HAVE_DOT               = YES
+INTERACTIVE_SVG        = YES
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = YES
+WARN_IF_INCOMPLETE_DOC = YES
+ENABLE_PREPROCESSING   = YES
+MACRO_EXPANSION        = YES
+OUTPUT_LANGUAGE        = English
