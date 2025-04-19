@@ -12,7 +12,7 @@ Ovaj mini alarmni sustav koristi Arduino platformu za upravljanje senzorima i om
 ## Simulacija (Wokwi)
 Projekt je napravljen i testiran u [Wokwi simulatoru](https://wokwi.com/) – Arduino online alat za razvoj i simulaciju.
 
-## ▶Upute za korištenje
+## Upute za korištenje
 
 | Tipka  | Funkcija                          |
 |--------|-----------------------------------|
