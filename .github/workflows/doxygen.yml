@@ -10,6 +10,8 @@ on:
       - '**.h'
       - 'Doxyfile'
 
+      workflow_dispatch:
+
 jobs:
   generate-docs:
     runs-on: ubuntu-latest
