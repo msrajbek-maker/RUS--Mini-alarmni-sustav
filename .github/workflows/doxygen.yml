@@ -9,7 +9,7 @@ on:
       - '**.cpp'
       - '**.h'
       - 'Doxyfile'
-
+  workflow_dispatch:
 
 jobs:
   generate-docs:
