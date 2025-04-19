@@ -11,6 +11,10 @@ on:
       - 'Doxyfile'
   workflow_dispatch:
 
+permissions:
+  contents: write
+  pages: write
+
 jobs:
   generate-docs:
     runs-on: ubuntu-latest
