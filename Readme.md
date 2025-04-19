@@ -1,18 +1,18 @@
-# 📟 Mini alarmni sustav (Arduino + Wokwi)
+# Mini alarmni sustav (Arduino + Wokwi)
 
-Ovaj mini alarmni sustav koristi Arduino platformu za upravljanje senzorima i omogućuje korisnicima da podešavaju sigurnosne parametre poput PIN-a i granice PPM (parts per million) za plinski senzor.
+Ovaj mini alarmni sustav koristi Arduino platformu za upravljanje senzorima i omogućuje korisnicima da podešavaju sigurnosne parametre poput PIN-a i granice PPM za plinski senzor.
 
-## 🔧 Funkcionalnosti
+## Funkcionalnosti
 - Unos PIN-a za deaktivaciju alarma
 - Odabir između PIR (pokret) i plinskog senzora
 - Resetiranje PIN-a
 - Postavljanje granice PPM-a za plinski senzor
 - Automatska detekcija pokreta ili plina i aktivacija alarma
 
-## 🧪 Simulacija (Wokwi)
+## Simulacija (Wokwi)
 Projekt je napravljen i testiran u [Wokwi simulatoru](https://wokwi.com/) – Arduino online alat za razvoj i simulaciju.
 
-## ▶️ Upute za korištenje
+## ▶Upute za korištenje
 
 | Tipka  | Funkcija                          |
 |--------|-----------------------------------|
@@ -23,7 +23,7 @@ Projekt je napravljen i testiran u [Wokwi simulatoru](https://wokwi.com/) – Ar
 | `#`    | Pohrana unosa (PIN/PPM)           |
 | `*`    | Resetiranje unosa                 |
 
-## 📦 Potrebne komponente
+## Potrebne komponente
 - Arduino UNO
 - PIR senzor
 - MQ-135 plinski senzor
@@ -31,11 +31,11 @@ Projekt je napravljen i testiran u [Wokwi simulatoru](https://wokwi.com/) – Ar
 - 4x4 tipkovnica
 - Buzzer
 
-## 🔧 Postavljanje projekta
+## Postavljanje projekta
 1. Otvori projekt u [Wokwi](https://wokwi.com/)
 2. Pokreni simulaciju
 3. Koristi tipkovnicu za upravljanje alarmnim sustavom
 
-## 👨‍💻 Autor
-**Ime Prezime**  
-GitHub: [@tvojprofil](https://github.com/tvojprofil)
+## Autor
+Mario Šrajbek  
+GitHub: msrajbek-maker(https://github.com/msrajbek-maker)
