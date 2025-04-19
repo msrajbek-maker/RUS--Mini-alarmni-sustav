@@ -1,0 +1,14 @@
+# Doxygen konfiguracija
+
+PROJECT_NAME           = "Mini Alarmni Sustav"
+OUTPUT_DIRECTORY       = docs
+INPUT                  = .
+FILE_PATTERNS          = *.ino *.cpp *.h
+RECURSIVE              = YES
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+GENERATE_LATEX         = NO
+GENERATE_HTML          = YES
+GENERATE_TREEVIEW      = YES
+HTML_OUTPUT            = html
+FULL_PATH_NAMES        = NO
