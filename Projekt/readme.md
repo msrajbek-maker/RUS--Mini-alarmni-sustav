@@ -35,6 +35,7 @@ Projekt je napravljen i testiran u [Wokwi simulatoru](https://wokwi.com/) – Ar
 1. Otvori projekt u [Wokwi](https://wokwi.com/)
 2. Pokreni simulaciju
 3. Koristi tipkovnicu za upravljanje alarmnim sustavom
+4. 
 
 ## Autor
 Mario Šrajbek  
