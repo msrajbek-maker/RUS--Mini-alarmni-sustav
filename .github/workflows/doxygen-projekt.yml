@@ -1,38 +1,38 @@
 name: Doxygen Documentation for Projekt
-
+ 
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
-
+ 
 permissions:
   contents: write
-
+ 
 jobs:
   generate-docs:
     runs-on: ubuntu-latest
-
+ 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
+ 
       - name: Install Doxygen and Graphviz
         run: |
           sudo apt-get update
           sudo apt-get install -y doxygen graphviz
-
+ 
       - name: Create output directory
         run: mkdir -p docs/Projekt/html
         working-directory: Projekt
-
+ 
       - name: Generate Doxygen Documentation
         run: doxygen Doxyfile
         working-directory: Projekt
-
+ 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: Projekt/docs/Projekt/html
-        force_orphan: true 
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: Projekt/docs/Projekt/html
+          force_orphan: true
