@@ -1,9 +1,19 @@
-/**
- * @file
- * @brief Projekt - Mini alarmni sustav
- * @author Mario Srajbek
- * @date 30.4.2025.
- */
+/*!
+* \file sketch.ino
+* \brief Projekt - Mini alarmni sustav
+* 
+* Ovaj program implementira jednostavan alarmni sustav koji koristi više komponenti:
+* - PIR senzor za pokret
+* - Plinski MQ senzor
+* - LCD zaslon
+* - Zvučnik
+* - 4x4 tipkovnicu
+* 
+* Funkcionalnosti uključuju unos PIN-a, simulaciju alarma, upravljanje potrošnjom energije i prekide.
+*
+* \author Mario Srajbek
+* \date 30.4.2025.
+*/
 
  #include <Keypad.h>              /**< Biblioteka za rad s matricama tipkovnica */
  #include <Wire.h>                /**< Biblioteka za I2C komunikaciju */
