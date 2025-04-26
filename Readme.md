@@ -36,6 +36,8 @@ Projekt je napravljen i testiran u [Wokwi simulatoru](https://wokwi.com/) – Ar
 2. Pokreni simulaciju
 3. Koristi tipkovnicu za upravljanje alarmnim sustavom
 
+## Testiranje i ispitivanje Mini alarmnog sustava
+Testiranje i ispitivanje Mini alarmnog sustava, koje bi korisniku moglo pružiti uslugu da lakše razumije sustav i da se jednostavnije služi sa koracima rada navedenog sustava, nalazi se u Wiki dokumentaciji pod kategorijom "Opis projektnog zadatka" na samome dnu.
 
 ## Autor
 Mario Šrajbek  
