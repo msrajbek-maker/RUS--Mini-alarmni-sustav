@@ -36,8 +36,6 @@ Projekt je napravljen i testiran u [Wokwi simulatoru](https://wokwi.com/) – Ar
 2. Pokreni simulaciju
 3. Koristi tipkovnicu za upravljanje alarmnim sustavom
 
-##Testiranje i ispitivanje
-
 
 ## Autor
 Mario Šrajbek  
