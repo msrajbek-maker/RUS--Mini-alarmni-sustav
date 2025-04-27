@@ -1,0 +1,11 @@
+@startuml
+actor Korisnik
+
+rectangle "Odabir senzora" {
+  usecase "Odabir PIR senzora" as UC2A
+  usecase "Odabir plinskog senzora" as UC2B
+}
+
+Korisnik --> UC2A
+Korisnik --> UC2B
+@enduml

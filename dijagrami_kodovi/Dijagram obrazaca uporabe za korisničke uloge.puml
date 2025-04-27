@@ -1,0 +1,19 @@
+@startuml
+actor Korisnik
+
+rectangle "Interakcije korisnika sa sustavom" {
+  usecase "Unos PIN-a"
+  usecase "Resetiranje PIN-a"
+  usecase "Odabir senzora"
+  usecase "Postavljanje granice PPM-a"
+  usecase "Gasenje alarma"
+  usecase "Praćenje statusa"
+}
+
+Korisnik --> "Unos PIN-a"
+Korisnik --> "Resetiranje PIN-a"
+Korisnik --> "Odabir senzora"
+Korisnik --> "Postavljanje granice PPM-a"
+Korisnik --> "Gasenje alarma"
+Korisnik --> "Praćenje statusa"
+@enduml

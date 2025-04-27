@@ -1,0 +1,15 @@
+@startuml
+actor "Vanjski senzor (PIR/plinski)"
+actor "Korisnik"
+actor "Buzzer / Aktuator"
+
+rectangle "Integracije sustava" {
+  usecase "Očitavanje senzora"
+  usecase "Upravljanje alarmom"
+  usecase "Komunikacija s korisnikom"
+}
+
+"Vanjski senzor (PIR/plinski)" --> "Očitavanje senzora"
+"Buzzer / Aktuator" --> "Upravljanje alarmom"
+"Korisnik" --> "Komunikacija s korisnikom"
+@enduml

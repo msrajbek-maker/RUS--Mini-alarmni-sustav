@@ -1,0 +1,39 @@
+@startuml
+actor Korisnik
+ 
+participant Tipkovnica
+participant "LCD zaslon" as LCD
+participant "Mikrokontroler (Arduino)" as Arduino
+participant "Plinski senzor" as Senzor
+participant "Alarm (buzzer)" as Alarm
+ 
+== Inicijacija promjene ==
+ 
+Korisnik -> Tipkovnica : Pritisne tipku D
+Tipkovnica -> Arduino : Zatražena promjena granice PPM
+Arduino -> LCD : "Unesite novu granicu PPM"
+ 
+== Unos nove granice ==
+ 
+Korisnik -> Tipkovnica : Unosi broj (npr. 500)
+Tipkovnica -> Arduino : Unos broja (500)
+Arduino -> LCD : "Nova granica: 500 PPM"
+ 
+== Potvrda odabira ==
+ 
+Korisnik -> Tipkovnica : Pritisne #
+Tipkovnica -> Arduino : Potvrda odabira
+Arduino -> LCD : "Granica postavljena na 500 PPM"
+ 
+== Praćenje razine plina ==
+ 
+loop Praćenje plina
+    Senzor -> Arduino : Očitavanje razine plina (npr. 550 PPM)
+    Arduino -> Arduino : Provjerava ako je očitavanje veće od granice
+    alt Ako je očitavanje veće od granice (500 PPM)
+        Arduino -> Alarm : Aktivira alarm
+    else Ako je očitavanje manje od granice
+        Arduino -> Alarm : Isključuje alarm
+    end
+end
+@enduml

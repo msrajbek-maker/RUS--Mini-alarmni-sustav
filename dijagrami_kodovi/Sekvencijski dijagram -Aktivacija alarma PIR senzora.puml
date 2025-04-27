@@ -1,0 +1,27 @@
+@startuml
+actor Korisnik
+ 
+participant "Mikrokontroler (Arduino)" as Arduino
+participant "Senzor (PIR / Plin)" as Senzor
+participant Buzzer
+participant "LCD zaslon" as LCD
+participant Tipkovnica
+ 
+== Detekcija opasnosti ==
+ 
+Senzor -> Arduino : Detektiran pokret / visoka PPM vrijednost
+Arduino -> Buzzer : Aktiviraj alarm
+Arduino -> LCD : Prikazuje "Alarm aktiviran! Unesite PIN:"
+ 
+== Reakcija korisnika ==
+ 
+Korisnik -> Tipkovnica : Unos PIN-a
+Tipkovnica -> Arduino : PIN input
+ 
+alt PIN točan
+    Arduino -> Buzzer : Isključi alarm
+    Arduino -> LCD : Prikazuje "Alarm ugašen!"
+else PIN netočan
+    Arduino -> LCD : "Pogrešan PIN\nPritisnite * za novi unos"
+end
+@enduml
