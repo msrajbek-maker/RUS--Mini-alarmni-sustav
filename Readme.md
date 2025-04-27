@@ -9,8 +9,17 @@ Ovaj mini alarmni sustav koristi Arduino platformu za upravljanje senzorima i om
 - Postavljanje granice PPM-a za plinski senzor
 - Automatska detekcija pokreta ili plina i aktivacija alarma
 
+##Dokumentacija
+GitHub Wiki - https://github.com/msrajbek-maker/RUS--Mini-alarmni-sustav/wiki
+Doxygen - https://msrajbek-maker.github.io/RUS--Mini-alarmni-sustav/
+
+
 ## Simulacija (Wokwi)
 Projekt je napravljen i testiran u [Wokwi simulatoru](https://wokwi.com/) – Arduino online alat za razvoj i simulaciju.
+1. Otvori projekt u Wokwi simulatoru (https://wokwi.com/projects/428416281736408065)
+2. Pokreni simulaciju
+3. Koristi tipkovnicu za upravljanje alarmnim sustavom
+
 
 ## Upute za korištenje
 
@@ -33,11 +42,6 @@ Projekt je napravljen i testiran u [Wokwi simulatoru](https://wokwi.com/) – Ar
 - 16x2 LCD + I2C
 - 4x4 tipkovnica
 - Buzzer
-
-## Postavljanje projekta
-1. Otvori projekt u Wokwi simulatoru (https://wokwi.com/projects/428416281736408065)
-2. Pokreni simulaciju
-3. Koristi tipkovnicu za upravljanje alarmnim sustavom
 
 ## Testiranje i ispitivanje Mini alarmnog sustava
 Testiranje i ispitivanje Mini alarmnog sustava, koje bi korisniku moglo pružiti uslugu da lakše razumije sustav i da se jednostavnije služi sa koracima rada navedenog sustava, nalazi se u Wiki dokumentaciji pod kategorijom "Opis projektnog zadatka" na samome dnu.
