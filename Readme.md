@@ -9,7 +9,8 @@ Ovaj mini alarmni sustav koristi Arduino platformu za upravljanje senzorima i om
 - Postavljanje granice PPM-a za plinski senzor
 - Automatska detekcija pokreta ili plina i aktivacija alarma
 
-##Dokumentacija
+## Dokumentacija  
+
 GitHub Wiki - https://github.com/msrajbek-maker/RUS--Mini-alarmni-sustav/wiki  
 Doxygen - https://msrajbek-maker.github.io/RUS--Mini-alarmni-sustav/
 
