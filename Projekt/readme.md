@@ -32,10 +32,12 @@ Projekt je napravljen i testiran u [Wokwi simulatoru](https://wokwi.com/) – Ar
 - Buzzer
 
 ## Postavljanje projekta
-1. Otvori projekt u [Wokwi](https://wokwi.com/)
+1. Otvori projekt u Wokwi simulatoru (https://wokwi.com/projects/428416281736408065)
 2. Pokreni simulaciju
 3. Koristi tipkovnicu za upravljanje alarmnim sustavom
-4. 
+
+## Testiranje i ispitivanje Mini alarmnog sustava
+Testiranje i ispitivanje Mini alarmnog sustava, koje bi korisniku moglo pružiti uslugu da lakše razumije sustav i da se jednostavnije služi sa koracima rada navedenog sustava, nalazi se u Wiki dokumentaciji pod kategorijom "Opis projektnog zadatka" na samome dnu.
 
 ## Autor
 Mario Šrajbek  
