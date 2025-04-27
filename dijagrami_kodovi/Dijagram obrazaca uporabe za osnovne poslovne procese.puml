@@ -2,6 +2,7 @@
 actor Sustav
 
 rectangle "Mini Alarmni Sustav - poslovni procesi" {
+  usecase "Sleep mode"
   usecase "Automatska detekcija pokreta (PIR)"
   usecase "Automatska detekcija plina"
   usecase "Aktivacija alarma"
@@ -9,8 +10,9 @@ rectangle "Mini Alarmni Sustav - poslovni procesi" {
   usecase "Praćenje i prikaz statusa"
 }
 
-Sustav --> "Automatska detekcija pokreta (PIR)"
-Sustav --> "Automatska detekcija plina"
+Sustav --> "Sleep mode"
+"Sleep mode" --> "Automatska detekcija pokreta (PIR)"
+"Sleep mode" --> "Automatska detekcija plina"
 Sustav --> "Aktivacija alarma"
 Sustav --> "Reakcija na ispravan PIN"
 Sustav --> "Praćenje i prikaz statusa"

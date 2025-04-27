@@ -1,28 +1,30 @@
 @startuml
 left to right direction
- 
+
 actor Korisnik
 actor Aktuator
- 
+
 rectangle "Mini alarmni sustav" {
   usecase "Unos PIN-a" as UC1
   usecase "Odabir načina rada" as UC2
+  usecase "Sleep mode" as UC8
   usecase "Resetiranje PIN-a" as UC3
-  usecase "Gašenje alarma" as UC4
+  usecase "Isključenje alarma" as UC4
   usecase "Detekcija pokreta (PIR)" as UC5
   usecase "Detekcija plina (MQ-2)" as UC6
   usecase "Postavke granice PPM-a" as UC7
 }
- 
+
 Korisnik --> UC1
 Korisnik --> UC2
 Korisnik --> UC3
 Korisnik --> UC4
- 
-UC2 --> UC5 : Ako odabran PIR
-UC2 --> UC6 : Ako odabran Plin
+
+UC2 --> UC8 : Prije aktivacije senzora
+UC8 --> UC5 : Ako odabran PIR
+UC8 --> UC6 : Ako odabran Plin
 UC6 --> UC7 : Postavke granice PPM-a
- 
+
 Aktuator --> UC5 : Aktivira alarm
 Aktuator --> UC6 : Aktivira alarm
 @enduml
