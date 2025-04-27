@@ -23,6 +23,10 @@ Projekt je napravljen i testiran u [Wokwi simulatoru](https://wokwi.com/) – Ar
 | `#`    | Pohrana unosa (PIN/PPM)           |
 | `*`    | Resetiranje unosa                 |
 
+## Shema
+![slikazawiki](https://github.com/user-attachments/assets/4a44c01f-1986-4191-ac84-677a9fa5ec02)
+
+
 ## Potrebne komponente
 - Arduino UNO
 - PIR senzor
