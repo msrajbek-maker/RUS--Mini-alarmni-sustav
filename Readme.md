@@ -23,7 +23,7 @@ Projekt je napravljen i testiran u [Wokwi simulatoru](https://wokwi.com/) – Ar
 | `#`    | Pohrana unosa (PIN/PPM)           |
 | `*`    | Resetiranje unosa                 |
 
-##Shema
+## Shema
 ![slikazawiki](https://github.com/user-attachments/assets/dd00760c-540e-47ca-a1d7-483467ba0626)
 
 ## Potrebne komponente
